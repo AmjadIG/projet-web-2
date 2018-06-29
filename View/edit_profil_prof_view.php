@@ -25,7 +25,7 @@
   <!-- edit  profil -->
      <div class="col-lg-12 col-sm-12 col-12 login-page">
          <div class="modal-content">
-    <form method="post" action="./../Controller/edit_profil_prof_Controller.php">
+    <form method="post" action="./../../Controller/edit_profil_prof_Controller.php">
       <input name="mail" value="<?php echo $_POST["mail"]; ?>" hidden/>
       <label class="control-label" for="blood_group"></label>
       <class="form">
