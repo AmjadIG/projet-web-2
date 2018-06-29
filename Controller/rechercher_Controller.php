@@ -23,6 +23,5 @@ if ($dateCours < $now){
   echo($now);
 	$msg = "unvailable";
   */
-	header("location:./../../cours?date=" .$msg);
 }
 ?>

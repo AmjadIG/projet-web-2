@@ -62,6 +62,7 @@
     	   </div>
          </div>
         </form>
+
       <!-- fin Rechercher -->
     <script src="./View/assets/js/app.js" charset="utf-8"></script>
   </body>
