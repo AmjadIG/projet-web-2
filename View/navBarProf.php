@@ -7,7 +7,7 @@
     <a href="https://projet-web-bahroun.herokuapp.com/prof/cours" class="m-link"><i class="fas fa-book"></i>  Mes cours</a>
     <a href="https://projet-web-bahroun.herokuapp.com/prof/cours/proposer" class="m-link"><i class="fas fa-plus"></i>   Proposer</a>
     <a href="https://projet-web-bahroun.herokuapp.com/prof/profil" class="m-link"><i class="fas fa-user"></i>  Mon profil</a>
-    <a href="../Controller/deconnexion_Controller.php" class="m-link"><i class="fas fa-user-times"></i></a>
+    <a href="./../../../../Controller/deconnexion_Controller.php" class="m-link"><i class="fas fa-user-times"></i></a>
   </div>
   <div class ="m-nav-toggle">
       <span class ="m-toggle-icon"></span>
