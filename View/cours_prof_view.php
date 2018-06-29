@@ -45,6 +45,12 @@ $reserv = $req2->fetchAll();
     </header>
 
     <!-- cours prof -->
+    <?php if (isset($_GET["date"])){ ?>
+      <div class="alert alert-danger">
+      <strong> la date </strong> n'est pas autorisée.
+      </div>
+     <?php }?>
+
     <?php if (isset($_GET["edit"]))
     { ?>
       <div class="alert alert-success" role="alert">

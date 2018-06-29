@@ -13,7 +13,12 @@
 	$mail =    getProf($_COOKIE['prof']);
 	$idProf =  $mail['idProf'];
 	$reserve = 0;
+	$now = date('Y-m-d');
 
+	if ($datecours < $now){
+		$msg = "unvailable";
+		header("location:./../prof/cours?date=" .$msg);
+	}
 		$matierefinded = verif_presenceMatiere($matiere);
 		$niveaufinded	=verif_presenceNiveau($niveau);
 

@@ -14,5 +14,10 @@ $niveau =      getNiveau($niv);
 $idNiveau =    ($niveau['idNiveau']);
 
 $cours =       rechercher($idMatiere,$idNiveau,$ville,$datecours);
+$now = date('Y-m-d');
 
+if ($dateCours < $now){
+	$msg = "unvailable";
+	header("location:./../eleve/cours?date=" .$msg);
+}
 ?>

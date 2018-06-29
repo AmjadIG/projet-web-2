@@ -42,6 +42,12 @@ $cours = $req->fetchAll();
 
     <!-- Mescours -->
     <h2>Mes cours réservés :</h2>
+    
+    <?php if (isset($_GET["date"])){ ?>
+      <div class="alert alert-danger">
+      <strong> la date </strong> n'est pas autorisée.
+      </div>
+     <?php }?>
 
     <?php if (isset($_GET["reservation"]))
     { ?>
