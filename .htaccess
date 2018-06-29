@@ -5,7 +5,6 @@ Rewritecond %{HTTP_HOST} ^https://projet-web-bahroun.herokuapp.com
 Rewritecond %{REQUEST_URI} !^/index.php
 Rewriterule ^(.*)$ /index.php/ [L]
 
-
 RewriteRule	^login$	./View/connexion_view.php	[L]
 RewriteRule	^logout$	./View/connexion_view.php	[L]
 

@@ -19,7 +19,13 @@ $idMatiere = $mat['idMatiere'];
 $niveau =     htmlspecialchars($_POST['niveau']); //
 $niv = getNiveau($niveau);
 $idNiveau = htmlentities($niv['idNiveau']);
-if(Verif_presenceEleve($idCours) == 0 ){
+$now = date('Y-m-d');
+
+if ($dateCours < $now){
+	//$msg = "unvailable";
+	//header("location:./../prof/cours/editer?date=" .$msg);
+}
+/*if(Verif_presenceEleve($idCours) == 0 ){
 		editerCours($idCours,$prix,$ville,$lieu,$debut,$fin,$dateCours,$idNiveau,$idMatiere);
   $msg = "success";
   header("location:./../prof/cours?edit=" .$msg);
@@ -28,5 +34,5 @@ else{
   	$msg = "student_reserved_this_course";
     header("location:./../prof/cours?errorsuppr=" .$msg);
 }
-
+*/
 ?>
