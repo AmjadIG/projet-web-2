@@ -29,11 +29,6 @@ $bd=connexion();
        <?php include("./../View/navBarEleve.php"); ?>
      </header>
 
-     <?php if (isset($_GET["account"])){ ?>
-       <div class="alert alert-danger">
-       <strong> la date </strong> n'est pas autorisée.
-       </div>
-      <?php }?>
 
     <!-- edit  profil -->
     <div class="col-lg-8 col-sm-8 col-12 login-page">

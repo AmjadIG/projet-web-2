@@ -25,6 +25,12 @@
 
     <!-- Modifier -->
     <h2> Modifier un cours :</h2>
+    <?php if (isset($_GET["date"])){ ?>
+      <div class="alert alert-danger">
+      <strong> la date </strong> n'est pas autorisée.
+      </div>
+     <?php }?>
+
     <?php if (isset($_GET["edit"]))
     { ?>
     <p class="center-align red"><?php
