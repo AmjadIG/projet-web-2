@@ -10,14 +10,6 @@
 require_once("../Model/BD_connexion.php");
 require_once("../Model/rechercher_model.php");
 require_once("../Controller/rechercher_Controller.php");
-$bd=connexion();
-$prof = getProf($_COOKIE['prof']);
-$id = $prof["idProf"];
-$req = $bd->prepare('SELECT n.niveau, nomMatiere, c.* FROM cours AS c, matiere AS m,niveau as n WHERE c.idMatiere = m.idMatiere and c.idNiveau = n.idNiveau and c.idProf =:idProf
-                                                                                                ORDER BY dateCours ASC');
-$req->bindParam(':idProf', $id);
-$req->execute();
-$cours = $req->fetchAll();
 
  ?>
  <!DOCTYPE html>
@@ -27,9 +19,9 @@ $cours = $req->fetchAll();
      <title> Helpy </title>
 
      <link rel="stylesheet" href="./../../../View/assets/css/bootstrap.min.css">
-     <link rel="stylesheet" href="./../../../../View/assets/css/normalize.css">
-     <link rel="stylesheet" href="./../../../../View/assets/css/header.css">
-     <link rel="stylesheet" href="./../../../../View/assets/css/connexion.css">
+     <link rel="stylesheet" href="./../../../View/assets/css/normalize.css">
+     <link rel="stylesheet" href="./../../../View/assets/css/header.css">
+     <link rel="stylesheet" href="./../../../View/assets/css/connexion.css">
      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" charset="utf-8"></script>
    </head>
