@@ -22,6 +22,7 @@ $idNiveau = htmlentities($niv['idNiveau']);
 $now = date('Y-m-d');
 
 if ($dateCours < $now){
+	echo("ok");
 	//$msg = "unvailable";
 	//header("location:./../prof/cours/editer?date=" .$msg);
 }
