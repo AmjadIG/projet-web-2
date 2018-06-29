@@ -7,16 +7,16 @@ $prof = getProf($_COOKIE['prof']);
 $id = $prof["idProf"];
 
 $idCours = htmlentities($_POST['idCours']);
-$lieu =    htmlentities($_POST['lieu']);
-$ville =   htmlentities($_POST['ville']);
+$lieu =    htmlspecialchars($_POST['lieu']); //
+$ville =   htmlspecialchars($_POST['ville']); //
 $prix =    htmlentities($_POST['prix']);
 $dateCours = htmlentities($_POST['dateCours']);
 $debut =   htmlentities($_POST['debut']);
 $fin =     htmlentities($_POST['fin']);
-$nomMatiere = htmlspecialchars($_POST['matiere']);
+$nomMatiere = htmlspecialchars($_POST['matiere']); //
 $mat = getMatiere($nomMatiere);
 $idMatiere = $mat['idMatiere'];
-$niveau =     htmlentities($_POST['niveau']);
+$niveau =     htmlspecialchars($_POST['niveau']); //
 $niv = getNiveau($niveau);
 $idNiveau = htmlentities($niv['idNiveau']);
 if(Verif_presenceEleve($idCours) == 0 ){
