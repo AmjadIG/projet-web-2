@@ -18,6 +18,6 @@ $now = date('Y-m-d');
 
 if ($dateCours < $now){
 	$msg = "unvailable";
-	header("location:./../eleve/cours?date=" .$msg);
+	header("location:./../../cours?date=" .$msg);
 }
 ?>

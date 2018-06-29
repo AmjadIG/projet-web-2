@@ -19,30 +19,31 @@
 		$msg = "unvailable";
 		header("location:./../prof/cours?date=" .$msg);
 	}
-		$matierefinded = verif_presenceMatiere($matiere);
-		$niveaufinded	=verif_presenceNiveau($niveau);
+else{
+			$matierefinded = verif_presenceMatiere($matiere);
+			$niveaufinded	=verif_presenceNiveau($niveau);
 
-		if($matierefinded == NULL){
-			$res = ajouter_matiere($matiere);
-		}
-		if($niveaufinded == NULL){
-			$res = ajouter_niveau($niveau);
-		}
-		$mat = getMatiere($matiere);
-		$idMatiere = $mat['idMatiere'];
-		$niv = getNiveau($niveau);
-		$nomMatiere = $mat['nomMatiere'];
-		$idNiveau = $niv['idNiveau'];
+			if($matierefinded == NULL){
+				$res = ajouter_matiere($matiere);
+			}
+			if($niveaufinded == NULL){
+				$res = ajouter_niveau($niveau);
+			}
+			$mat = getMatiere($matiere);
+			$idMatiere = $mat['idMatiere'];
+			$niv = getNiveau($niveau);
+			$nomMatiere = $mat['nomMatiere'];
+			$idNiveau = $niv['idNiveau'];
 
 
-		if( $matierefinded != NULL && $niveaufinded != NULL){
-				$res = ajouter_cours($idMatiere,$idProf,$prix,$ville,$lieu,$debut,$fin,$reserve,$datecours,$idNiveau);
-				$msg = "$nomMatiere";
-				header("location:./../prof/cours?add=" .$msg);
+			if( $matierefinded != NULL && $niveaufinded != NULL){
+					$res = ajouter_cours($idMatiere,$idProf,$prix,$ville,$lieu,$debut,$fin,$reserve,$datecours,$idNiveau);
+					$msg = "$nomMatiere";
+					header("location:./../prof/cours?add=" .$msg);
+			}
+			else{
+				$msg ="impossible_add";
+					header("location:./../prof/cours?fail=" .$msg);
+			}
 		}
-		else{
-			$msg ="impossible_add";
-				header("location:./../prof/cours?fail=" .$msg);
-		}
-
 ?>
