@@ -15,7 +15,7 @@
 	$reserve = 0;
 	$now = date('Y-m-d');
 
-	if ($datecours =< $now){
+	if ($datecours < $now){
 		$msg = "unvailable";
 		header("location:./../prof/cours?date=" .$msg);
 	}
