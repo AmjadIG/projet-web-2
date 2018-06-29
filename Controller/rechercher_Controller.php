@@ -17,7 +17,9 @@ $cours =       rechercher($idMatiere,$idNiveau,$ville,$datecours);
 $now = date('Y-m-d');
 
 if ($dateCours < $now){
+  echo($dateCours);
+  echo($now);
 	$msg = "unvailable";
-	header("location:./../../cours?date=" .$msg);
+	//header("location:./../../cours?date=" .$msg);
 }
 ?>
