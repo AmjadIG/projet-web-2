@@ -10,7 +10,14 @@
 require_once("../Model/BD_connexion.php");
 require_once("../Model/rechercher_model.php");
 require_once("../Controller/rechercher_Controller.php");
-
+$bd=connexion();
+$prof = getProf($_COOKIE['prof']);
+$id = $prof["idProf"];
+$req = $bd->prepare('SELECT n.niveau, nomMatiere, c.* FROM cours AS c, matiere AS m,niveau as n WHERE c.idMatiere = m.idMatiere and c.idNiveau = n.idNiveau and c.idProf =:idProf
+                                                                                                ORDER BY dateCours ASC');
+$req->bindParam(':idProf', $id);
+$req->execute();
+$cours = $req->fetchAll();
 
  ?>
  <!DOCTYPE html>

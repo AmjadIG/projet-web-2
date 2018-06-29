@@ -16,10 +16,8 @@
 	$now = date('Y-m-d');
 
 	if ($datecours < $now){
-		echo($dateCours);
-		echo($now);
 		$msg = "unvailable";
-		//header("location:./../prof/cours?date=" .$msg);
+		header("location:./../prof/cours?date=" .$msg);
 	}
 else{
 			$matierefinded = verif_presenceMatiere($matiere);
