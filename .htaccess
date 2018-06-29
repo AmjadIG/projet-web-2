@@ -1,0 +1,23 @@
+Options +FollowSymlinks
+RewriteEngine On
+
+Rewritecond %{HTTP_HOST} ^https://projet-web-bahroun.herokuapp.com
+Rewritecond %{REQUEST_URI} !^/index.php
+Rewriterule ^(.*)$ /index.php/ [L]
+
+
+RewriteRule	^login$	./View/connexion_view.php	[L]
+RewriteRule	^logout$	./View/connexion_view.php	[L]
+
+RewriteRule	^eleve/cours$	./View/cours_eleve_view.php	[L]
+RewriteRule	^eleve/cours/rechercher$	./View/rechercher_view.php	[L]
+RewriteRule	^eleve/cours/rechercher/resultats$	./View/resultat_recherche_view.php	[L]
+RewriteRule	^eleve/profil$	./View/profil_eleve_view.php	[L]
+RewriteRule	^eleve/profil/editer$	./View/edit_profil_eleve_view.php	[L]
+
+
+RewriteRule	^prof/cours$	./View/cours_prof_view.php	[L]
+RewriteRule	^prof/cours/proposer$	./View/proposer_view.php	[L]
+RewriteRule	^prof/cours/editer$	./View/edit_cours_prof_view.php	[L]
+RewriteRule	^prof/profil$	./View/profil_prof_view.php	[L]
+RewriteRule	^prof/profil/editer$	./View/edit_profil_prof_view.php	[L]
